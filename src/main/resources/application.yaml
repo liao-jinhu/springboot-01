@@ -1,0 +1,67 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: test2
+---
+server:
+  port: 8081
+  spring:
+    config:
+      activate:
+        on-profile: test0
+
+---
+server:
+  port: 8082
+  spring:
+    config:
+      activate:
+        on-profile: test1
+
+---
+server:
+  port: 8083
+  spring:
+    config:
+      activate:
+        on-profile: test2
+
+
+
+
+#对象
+student:
+  name: liao
+  vlue: 3
+
+#行内写法
+student1: { name:liao,value:3 }
+
+#数组
+pets:
+  -pig
+  -dog
+  -cat
+
+pets1: [ pig,dog,cat ]
+
+person:
+  name: qinjiang
+  age: 3
+  emial: 153038066@qq.com
+  happy: false
+  birth: 2000/01/01
+  maps: { k1: v1,k2: v2 }
+  lists:
+    - code
+    - girl
+    - music
+  dog:
+    name: 旺财
+    age: 1
+
+
+dog:
+  age: 12
+  first-name: 旺财
